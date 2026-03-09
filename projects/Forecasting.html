@@ -2,74 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Forecasting Exercises and Model Diagnostics | MMM Portfolio</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="topbar">
+    <a class="brand" href="../index.html">MMM Portfolio</a>
     <div class="nav">
-      <div class="brand"><a href="../index.html">Mohammed Jawhar</a></div>
-      <div class="badge">Forecasting</div>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
     </div>
+  </div>
 
-    <div class="card">
-      <h1 class="h1" style="font-size:26px;margin-bottom:6px">Forecasting Exercises and Model Diagnostics</h1>
-      <p class="sub" style="margin-top:0">Forecast a key metric and compare models for accuracy, stability, and explainability.</p>
-      <div class="btnrow" style="margin-top:12px">
-        <a class="btn primary" href="../notebooks_html/Forecasting.html">Open notebook view</a>
-        <a class="btn" href="../notebooks/Forecasting.ipynb">Download ipynb</a>
-      </div>
-      <div class="meta" style="margin-top:12px">
-        <span class="badge">Technologies: matplotlib, pandas, seaborn, sklearn, statsmodels, xgboost</span>
-      </div>
-    </div>
-
-    <div class="section kv">
-      <div class="card">
-        <h2>Pros</h2>
-        <ul class="list">
-          <li>Improves planning for spend, inventory, and staffing</li><li>Highlights seasonality, trends, and shocks</li><li>Provides confidence intervals when supported</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2>Cons</h2>
-        <ul class="list">
-          <li>Performance degrades with structural breaks and policy changes</li><li>External drivers may be missing</li><li>Overfitting risk with many features</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section kv">
-      <div class="card">
-        <h2>Stakeholder insights and comments</h2>
-        <ul class="list">
-          <li>Use rolling backtests to pick models not a single split</li><li>Track error by horizon to set realistic expectations</li><li>Combine forecasts with business rules for extremes</li>
-        </ul>
-        <p class="sub" style="margin-top:10px">Suggested stakeholder framing: what changed, why it matters, and what decision to take next.</p>
-      </div>
-      <div class="card">
-        <h2>Advice to management</h2>
-        <ul class="list">
-          <li>Use forecast to set guardrails for spend and targets</li><li>Refresh models on a fixed cadence and monitor drift</li><li>Create an alert when actuals diverge from forecast bands</li>
-        </ul>
+  <div class="container">
+    <div class="pagehead">
+      <h1>Forecasting Exercises and Model Diagnostics</h1>
+      <div class="actions">
+        <a class="button" href="../notebooks/Forecasting.ipynb">Open ipynb</a>
+        <a class="button secondary" href="../notebooks_html/Forecasting.html">Open notebook view</a>
       </div>
     </div>
 
     <div class="section">
-      <div class="card">
-        <h2>Improvements and next steps</h2>
-        <ul class="list">
-          <li>Add holiday, promo, and exogenous regressors</li><li>Ensemble Prophet and SARIMA with simple averaging</li><li>Automate retraining, backtesting, and reporting</li>
-        </ul>
+      <h2>Task</h2>
+      <p>Build and validate an analysis focused on forecasting exercises and model diagnostics.</p>
+    </div>
+
+    <div class="section">
+      <h2>Why this task is required</h2>
+      <p>Support budget and planning decisions by quantifying patterns and expected returns, and by reducing guesswork in channel or forecasting choices.</p>
+    </div>
+
+    <div class="section">
+      <h2>What I am doing to take care of it</h2>
+      <p>I cleaned and joined the input data, explored trends and relationships, built the model or comparison, and validated the results with diagnostic checks. Then I translated the findings into decisions a stakeholder can act on.</p>
+    </div>
+
+    <div class="section">
+      <h2>Charts and insights</h2>
+      <div class="figgrid">
+        
+            <div class="figure">
+              <img src="../assets/figures/Forecasting/figure_1.png" alt="Figure 1">
+              <div class="caption"><strong>Figure 1.</strong> Alternate data synthesis</div>
+              <div class="explain">Explanation: This chart is produced directly from the notebook output. It supports the task by showing the key pattern used to make the decision.</div>
+            </div>
+            
+            <div class="figure">
+              <img src="../assets/figures/Forecasting/figure_2.png" alt="Figure 2">
+              <div class="caption"><strong>Figure 2.</strong> Sales Forecasting</div>
+              <div class="explain">Explanation: This chart is produced directly from the notebook output. It supports the task by showing the key pattern used to make the decision.</div>
+            </div>
+            
+            <div class="figure">
+              <img src="../assets/figures/Forecasting/figure_3.png" alt="Figure 3">
+              <div class="caption"><strong>Figure 3.</strong> Sales Forecasting</div>
+              <div class="explain">Explanation: This chart is produced directly from the notebook output. It supports the task by showing the key pattern used to make the decision.</div>
+            </div>
+            
+            <div class="figure">
+              <img src="../assets/figures/Forecasting/figure_4.png" alt="Figure 4">
+              <div class="caption"><strong>Figure 4.</strong> Sales Forecasting</div>
+              <div class="explain">Explanation: This chart is produced directly from the notebook output. It supports the task by showing the key pattern used to make the decision.</div>
+            </div>
+            
+      </div>
+      <div class="insightbox">
+        <h3>Notebook insights</h3>
+        <p>This notebook contains analysis and charts. The written insight cells were limited. The charts and code below show the approach and results.</p>
       </div>
     </div>
 
     <div class="section">
-      <h2>Graphs and analysis</h2>
-      <iframe src="../notebooks_html/Forecasting.html" title="Notebook"></iframe>
-      <div class="footer">If the iframe is slow, open the notebook view using the button above.</div>
+      <h2>Final outcome for the business</h2>
+      <p>Final business outcome is documented in the notebook narrative when available. If the notebook does not include a final summary cell, this page highlights the measurable learnings and what I would recommend next.</p>
     </div>
+
+    <div class="section">
+      <h2>Pros</h2>
+      <p>Improves planning for spend, inventory, and staffing
+Highlights seasonality, trends, and shocks
+Provides confidence intervals when supported
+Performance degrades with structural breaks and policy changes
+External drivers may be missing
+Overfitting risk with many features</p>
+    </div>
+
+    <div class="section">
+      <h2>Cons</h2>
+      <p>Improves planning for spend, inventory, and staffing
+Highlights seasonality, trends, and shocks
+Provides confidence intervals when supported
+Performance degrades with structural breaks and policy changes
+External drivers may be missing
+Overfitting risk with many features</p>
+    </div>
+
+    <div class="section">
+      <h2>Stakeholder insights and comments</h2>
+      <p>Use rolling backtests to pick models not a single split
+Track error by horizon to set realistic expectations
+Combine forecasts with business rules for extremes
+Suggested stakeholder framing: what changed, why it matters, and what decision to take next.
+Use forecast to set guardrails for spend and targets
+Refresh models on a fixed cadence and monitor drift
+Create an alert when actuals diverge from forecast bands</p>
+    </div>
+
+    <div class="section">
+      <h2>Advice to management</h2>
+      <p>Use rolling backtests to pick models not a single split
+Track error by horizon to set realistic expectations
+Combine forecasts with business rules for extremes
+Suggested stakeholder framing: what changed, why it matters, and what decision to take next.
+Use forecast to set guardrails for spend and targets
+Refresh models on a fixed cadence and monitor drift
+Create an alert when actuals diverge from forecast bands</p>
+    </div>
+
+    <div class="section">
+      <h2>Improvements and next steps</h2>
+      <p>Add holiday, promo, and exogenous regressors
+Ensemble Prophet and SARIMA with simple averaging
+Automate retraining, backtesting, and reporting</p>
+    </div>
+
+    <div class="section">
+      <h2>Technologies used</h2>
+      <ul>
+        <li>matplotlib</li><li>pandas</li><li>seaborn</li><li>scikit learn</li><li>statsmodels</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="https://facebookexperimental.github.io/Robyn/" target="_blank" rel="noopener">Meta Robyn MMM</a></li><li><a href="https://github.com/google/lightweight_mmm" target="_blank" rel="noopener">Google LightweightMMM</a></li><li><a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45902.pdf" target="_blank" rel="noopener">Adstock and saturation notes</a></li><li><a href="https://facebook.github.io/prophet/" target="_blank" rel="noopener">Prophet documentation</a></li><li><a href="https://www.statsmodels.org/stable/tsa.html" target="_blank" rel="noopener">Statsmodels time series</a></li><li><a href="https://google.github.io/CausalImpact/" target="_blank" rel="noopener">CausalImpact paper and docs</a></li><li><a href="https://research.google/pubs/pub45900/" target="_blank" rel="noopener">Geo experiments guide</a></li>
+      </ul>
+    </div>
+
+    <div class="footer">Updated 2026-03-09</div>
   </div>
 </body>
 </html>
