@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Campaign Performance Modeling and Feature Engineering | MMM Portfolio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand"><a href="../index.html">Mohammed Jawhar</a></div>
+      <div class="badge">Marketing Mix Modeling</div>
+    </div>
+
+    <div class="card">
+      <h1 class="h1" style="font-size:26px;margin-bottom:6px">Campaign Performance Modeling and Feature Engineering</h1>
+      <p class="sub" style="margin-top:0">Estimate channel impact on sales or conversions and translate model outputs into budget guidance.</p>
+      <div class="btnrow" style="margin-top:12px">
+        <a class="btn primary" href="../notebooks_html/Jellyfish.html">Open notebook view</a>
+        <a class="btn" href="../notebooks/Jellyfish.ipynb">Download ipynb</a>
+      </div>
+      <div class="meta" style="margin-top:12px">
+        <span class="badge">Technologies: matplotlib, pandas, seaborn, sklearn, statsmodels, xgboost</span>
+      </div>
+    </div>
+
+    <div class="section kv">
+      <div class="card">
+        <h2>Pros</h2>
+        <ul class="list">
+          <li>Interpretable coefficients and clear contribution story</li><li>Works well as a first MMM baseline</li><li>Easy to communicate to non technical stakeholders</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Cons</h2>
+        <ul class="list">
+          <li>Sensitive to multicollinearity and missing variables</li><li>Needs careful handling of lag and diminishing returns</li><li>Assumes historical relationships hold in future</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section kv">
+      <div class="card">
+        <h2>Stakeholder insights and comments</h2>
+        <ul class="list">
+          <li>Identify top incremental channels by contribution and marginal return</li><li>Detect saturation where extra spend gives smaller lift</li><li>Use holdout validation to avoid overclaiming impact</li>
+        </ul>
+        <p class="sub" style="margin-top:10px">Suggested stakeholder framing: what changed, why it matters, and what decision to take next.</p>
+      </div>
+      <div class="card">
+        <h2>Advice to management</h2>
+        <ul class="list">
+          <li>Reallocate budget from saturated channels to higher marginal return channels</li><li>Run scenario planning for spend shifts across channels</li><li>Align measurement window with business cycle and promos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="card">
+        <h2>Improvements and next steps</h2>
+        <ul class="list">
+          <li>Add adstock and saturation transforms if not present</li><li>Add seasonality, pricing, promo, and macro controls</li><li>Use Bayesian MMM for uncertainty bands and stronger priors</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Graphs and analysis</h2>
+      <iframe src="../notebooks_html/Jellyfish.html" title="Notebook"></iframe>
+      <div class="footer">If the iframe is slow, open the notebook view using the button above.</div>
+    </div>
+  </div>
+</body>
+</html>
