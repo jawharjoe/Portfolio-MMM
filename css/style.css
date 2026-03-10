@@ -6,10 +6,10 @@ a{color:var(--accent);text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1100px;margin:0 auto;padding:24px}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0}
-.brand{font-weight:800;letter-spacing:.2px;font-size:30px;line-height:1.1}
+.brand{font-weight:800;letter-spacing:.2px;font-size:42px;line-height:1.05}
 .badge{display:inline-block;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px}
-.hero{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center;margin:18px 0 28px}
-.avatar{width:160px;height:160px;border-radius:999px;object-fit:cover;border:1px solid var(--border);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.hero{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:center;margin:18px 0 28px}
+.avatar{width:210px;height:210px;border-radius:999px;object-fit:cover;border:1px solid var(--border);box-shadow:0 14px 40px rgba(0,0,0,.35)}
 .h1{font-size:40px;line-height:1.1;margin:0}
 .sub{color:var(--muted);margin:8px 0 0;max-width:70ch}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
@@ -41,3 +41,18 @@ iframe{width:100%;height:780px;border:1px solid var(--border);border-radius:14px
 .pagehead{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .actions{display:flex;gap:10px;flex-wrap:wrap}
 .button.secondary{background:#fff;color:#111;border:1px solid rgba(0,0,0,.12)}
+
+.heroName{font-weight:900;font-size:34px;line-height:1.05;margin:0 0 6px}
+
+.testimonials{margin-top:34px}
+.testHead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:14px}
+.testGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:900px){.testGrid{grid-template-columns:1fr}}
+.testCard{display:block;text-decoration:none;color:inherit;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:var(--card);box-shadow:0 10px 30px rgba(0,0,0,.20);transition:transform .14s ease, box-shadow .14s ease}
+.testCard:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(0,0,0,.28)}
+.shotWrap{position:relative}
+.shot{width:100%;display:block}
+.coBadge{position:absolute;top:12px;right:12px;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.92);color:#111;font-weight:800;font-size:12px;border:1px solid rgba(0,0,0,.10)}
+.testMeta{padding:12px 14px 14px}
+.testName{font-weight:900}
+.testRole{opacity:.78;margin-top:6px}
