@@ -3,236 +3,282 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MMM Portfolio | Mohammed Jawhar</title>
+  <meta name="theme-color" content="#080e1b">
+  <meta name="description" content="Mohammed Jawhar's data science and marketing analytics portfolio: Bayesian marketing mix modeling, channel attribution, forecasting and decision science.">
+  <title>Mohammed Jawhar | Marketing Science &amp; Data Analytics Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css?v=20261102">
 </head>
-<body>
-  <div class="container">
-    <div class="nav">
-      <div class="badge">Marketing analytics, MMM, attribution, forecasting</div>
-      <div class="heroName">Mohammed Jawhar</div>
+<body class="portfolio-home">
+  <a class="skip-link" href="#projects">Skip to projects</a>
+  <header class="site-header">
+    <div class="home-shell header-inner">
+      <a class="logo" href="index.html" aria-label="Mohammed Jawhar — homepage">
+        <img class="logo-mark" src="assets/headshot.jpg" alt="">
+        <span>MOHAMMED JAWHAR</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#featured">Featured work</a>
+        <a href="#projects">Projects</a>
+        <a href="#approach">Approach</a>
+        <a href="#recommendations">Recommendations</a>
+        <a class="nav-contact" href="https://www.linkedin.com/in/mjawhar/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </nav>
     </div>
-
-    <div class="hero card">
-      <img class="avatar" src="assets/headshot.jpg" alt="Headshot">
+  </header>
+  <main class="home-shell">
+    <section class="hero-home" id="about" aria-labelledby="hero-title">
       <div>
-        <h1 class="h1">MMM and Marketing Analytics Portfolio</h1>
-        <p class="sub">Real MMM and marketing measurement work, built from my notebooks and turned into decisions. Each project page shows the problem, the method, the charts, the insights, and what I would do next for the business.</p>
-              <div class="btnrow">
-          <a class="btn primary" href="#projects">View projects</a>
-          <a class="btn" href="testimonials.html">Recommendations</a>
-          <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1">LinkedIn</a>
+        <span class="eyebrow">Lead Data Scientist · Marketing Measurement · AI</span>
+        <h1 id="hero-title">From complex data to <span class="gradient">clear decisions.</span></h1>
+        <p class="lead">I work at the intersection of data science, marketing analytics and business strategy. This portfolio brings together hands-on projects in marketing mix modeling, attribution, forecasting and decision science—showing both the methods and the questions behind them.</p>
+        <div class="hero-actions">
+          <a class="home-btn primary" href="#featured">Explore featured project <span aria-hidden="true">↗</span></a>
+          <a class="home-btn" href="#projects">Browse all work</a>
         </div>
-</div>
+        <div class="hero-specialties" aria-label="Areas of focus">
+          <span class="tiny-chip">Marketing Mix Modeling</span>
+          <span class="tiny-chip">Causal Measurement</span>
+          <span class="tiny-chip">Forecasting</span>
+          <span class="tiny-chip">Bayesian Inference</span>
+        </div>
+      </div>
+      <div class="hero-visual" aria-label="Illustrative marketing response curves">
+        <div class="chart-top">
+          <div><div class="chart-meta">Decision science / model illustration</div><div class="chart-label">Media response, not just model fit</div></div>
+          <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+        <svg viewBox="0 0 450 278" role="img" aria-label="Two smooth illustrative, diminishing-return curves representing hypothetical media channel response">
+          <defs>
+            <linearGradient id="mint-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#80dfc9" stop-opacity=".24"/><stop offset="1" stop-color="#80dfc9" stop-opacity="0"/></linearGradient>
+            <linearGradient id="blue-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#87a7ff" stop-opacity=".14"/><stop offset="1" stop-color="#87a7ff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <g stroke="#49617c" stroke-width="1" opacity=".24">
+            <path d="M35 35 H431 M35 83 H431 M35 131 H431 M35 179 H431 M35 227 H431"/>
+            <path d="M35 26 V236 M115 26 V236 M195 26 V236 M275 26 V236 M355 26 V236 M431 26 V236"/>
+          </g>
+          <path d="M35 229 C82 159 123 130 178 106 S300 61 431 43 L431 236 L35 236 Z" fill="url(#mint-area)"/>
+          <path d="M35 229 C91 194 143 157 206 140 S346 107 431 94 L431 236 L35 236 Z" fill="url(#blue-area)"/>
+          <path d="M35 229 C82 159 123 130 178 106 S300 61 431 43" stroke="#a3f0db" stroke-width="3.3" fill="none" stroke-linecap="round"/>
+          <path d="M35 229 C91 194 143 157 206 140 S346 107 431 94" stroke="#8facff" stroke-width="3.3" fill="none" stroke-linecap="round"/>
+          <circle cx="273" cy="74" r="7" fill="#a3f0db" stroke="#1c3f46" stroke-width="3"/>
+          <circle cx="273" cy="122" r="7" fill="#8facff" stroke="#253855" stroke-width="3"/>
+          <g font-size="10" fill="#889dbb" font-family="ui-sans-serif, sans-serif"><text x="33" y="255">Lower spend</text><text x="361" y="255">Higher spend</text></g>
+        </svg>
+        <div class="chart-bottom">
+          <div class="chart-legend"><span><i></i>Channel A</span><span><i class="blue"></i>Channel B</span></div>
+          <span class="label-illustrative">Illustrative · not fitted results</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="focus-strip" aria-label="Core portfolio areas">
+      <span>Areas of work</span>
+      <strong>Marketing Mix Modeling</strong>
+      <strong>Attribution &amp; Measurement</strong>
+      <strong>Time-Series Forecasting</strong>
+      <strong>Applied Analytics</strong>
     </div>
 
-    <div class="section" id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <div class="card" style="border-color:rgba(122,167,255,.42);background:linear-gradient(145deg,rgba(35,57,107,.75),rgba(15,27,51,.9))">
-      <div class="meta"><span class="badge">Featured project</span><span class="badge">Bayesian Marketing Mix Modeling</span></div>
-      <h3>Google Meridian: Bayesian MMM &amp; Budget Optimization</h3>
-      <p>Built a synthetic 156-week, three-channel Bayesian MMM with adstock, saturation, posterior diagnostics, response curves and an interactive budget simulator. Presented at Universidad Galileo in October 2026.</p>
-      <div class="meta"><span class="badge">Python</span><span class="badge">Google Meridian</span><span class="badge">JupyterLab</span></div>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Meridian_Bayesian_MMM.html">View case study</a>
-        <a class="btn" target="_blank" rel="noopener noreferrer" href="https://github.com/jawharjoe/marketing-measurement-meridian">Notebook &amp; lecture</a>
+    <section class="home-section" id="featured" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">01 / Featured case study</span><h2 id="featured-title">Turning MMM into a budget decision.</h2>
+          <p>An end-to-end teaching project using Google Meridian to illustrate Bayesian media-response modeling and what-if spend allocation.</p></div>
       </div>
-    </div>
-        
-        
-    <div class="card">
-      <h3>Campaign Performance Modeling and Feature Engineering</h3>
-      <div class="meta"><span class="badge">Marketing Mix Modeling</span><span class="badge">matplotlib pandas seaborn</span></div>
-      <p># Impression Data</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Jellyfish.html">Project page</a>
-        <a class="btn" href="notebooks_html/Jellyfish.html">Notebook view</a>
+      <div class="featured-panel">
+        <div class="featured-copy">
+          <span class="eyebrow">Google Meridian · Bayesian MMM</span>
+          <h3>Marketing measurement, from attribution to influence.</h3>
+          <p>A three-channel synthetic marketing mix model with advertising carryover, Hill saturation, model diagnostics and an interactive budget simulator. The project accompanied my guest lecture at Universidad Galileo in October 2026.</p>
+          <div class="featured-facts" aria-label="Project facts">
+            <div><strong>156</strong><span>synthetic weeks</span></div>
+            <div><strong>3</strong><span>media channels</span></div>
+            <div><strong>0.93</strong><span>in-sample R²</span></div>
+          </div>
+          <div class="hero-actions">
+            <a class="home-btn primary" href="projects/Meridian_Bayesian_MMM.html">Read case study ↗</a>
+            <a class="home-btn" target="_blank" rel="noopener noreferrer" href="https://github.com/jawharjoe/marketing-measurement-meridian">GitHub &amp; notebook</a>
+          </div>
+        </div>
+        <div class="featured-image">
+          <div class="visual-frame">
+            <img src="https://raw.githubusercontent.com/jawharjoe/marketing-measurement-meridian/main/assets/results/03_hill_and_response_curves.png" alt="Google Meridian Hill saturation and channel spend-response curves for synthetic Google Search, Meta and YouTube data" loading="lazy">
+          </div>
+          <span class="visual-caption">Real workshop chart · Synthetic teaching dataset · Model-estimated outcomes</span>
+        </div>
       </div>
-    </div>
-    
-    <div class="card">
-      <h3>Exploratory Analysis Exercise</h3>
-      <div class="meta"><span class="badge">Analytics</span><span class="badge">matplotlib numpy pandas</span></div>
-      <p>Analyze relationships in marketing and product data and translate findings into actions.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/E1Test.html">Project page</a>
-        <a class="btn" href="notebooks_html/E1Test.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Exploratory Plots and Diagnostics</h3>
-      <div class="meta"><span class="badge">Analytics</span><span class="badge">matplotlib pandas seaborn</span></div>
-      <p>Analyze relationships in marketing and product data and translate findings into actions.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Test2.html">Project page</a>
-        <a class="btn" href="notebooks_html/Test2.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Forecasting Exercises and Model Diagnostics</h3>
-      <div class="meta"><span class="badge">Forecasting</span><span class="badge">matplotlib pandas seaborn</span></div>
-      <p># Exercise 3</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Forecasting.html">Project page</a>
-        <a class="btn" href="notebooks_html/Forecasting.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Impressions vs Conversions Relationship Analysis</h3>
-      <div class="meta"><span class="badge">Marketing Mix Modeling</span><span class="badge">pandas</span></div>
-      <p># Impression Data</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/ImpVsConv.html">Project page</a>
-        <a class="btn" href="notebooks_html/ImpVsConv.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Marketing Attribution with Markov Chains and Heuristics</h3>
-      <div class="meta"><span class="badge">Attribution Modeling</span><span class="badge">matplotlib numpy pandas</span></div>
-      <p>Explain how channels assist conversion paths and quantify their share of credit across touchpoints.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Marketing_Attribution.html">Project page</a>
-        <a class="btn" href="notebooks_html/Marketing_Attribution.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Marketing Mix Model with Linear Regression</h3>
-      <div class="meta"><span class="badge">Marketing Mix Modeling</span><span class="badge">matplotlib numpy pandas</span></div>
-      <p># Coefficient Equation for Sales Prediction
+    </section>
 
-The linear regression equation for predicting sales based on advertising spend is:
-## {Sales} = β0 + β1{TV} + β2{Radio} + β3{Newspaper}...</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/MMM_Galileo.html">Project page</a>
-        <a class="btn" href="notebooks_html/MMM_Galileo.html">Notebook view</a>
+    <section class="home-section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">02 / The work</span><h2 id="projects-title">Explore the projects.</h2><p>From regression foundations to attribution and forecasting. Every project has a dedicated page and a notebook view.</p></div>
       </div>
-    </div>
-    
-    <div class="card">
-      <h3>MMM Foundations with Adstock and Saturation</h3>
-      <div class="meta"><span class="badge">Marketing Mix Modeling</span><span class="badge">matplotlib numpy pandas</span></div>
-      <p># Coefficient Equation for Sales Prediction
+      <div class="section-toolbar">
+        <div class="filters" role="group" aria-label="Filter projects by subject">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All projects</button>
+          <button class="filter-btn" type="button" data-filter="mmm" aria-pressed="false">Marketing mix</button>
+          <button class="filter-btn" type="button" data-filter="attribution" aria-pressed="false">Attribution</button>
+          <button class="filter-btn" type="button" data-filter="forecasting" aria-pressed="false">Forecasting</button>
+          <button class="filter-btn" type="button" data-filter="analytics" aria-pressed="false">Analytics</button>
+        </div>
+        <span class="result-count" id="result-count" role="status" aria-live="polite">12 projects</span>
+      </div>
+      <div class="work-grid" id="work-grid">
+<article class="work-card" data-category="mmm">
+  <div class="work-card-top"><span class="work-category">Marketing Mix Modeling</span><span class="work-number">01</span></div>
+  <h3>Campaign Performance Modeling and Feature Engineering</h3>
+  <p>Exploratory campaign modeling focused on impression data, feature engineering and marketing performance patterns.</p>
+  <div class="work-tags"><span>Python</span><span>Pandas</span></div>
+  <div class="work-actions"><a href="projects/Jellyfish.html" aria-label="Read Campaign Performance Modeling and Feature Engineering case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Jellyfish.html" aria-label="Read Campaign Performance Modeling and Feature Engineering notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="analytics">
+  <div class="work-card-top"><span class="work-category">Analytics</span><span class="work-number">02</span></div>
+  <h3>Exploratory Analysis Exercise</h3>
+  <p>Using exploratory data analysis to inspect patterns, relationships and questions in business data.</p>
+  <div class="work-tags"><span>Python</span><span>EDA</span></div>
+  <div class="work-actions"><a href="projects/E1Test.html" aria-label="Read Exploratory Analysis Exercise case study">Explore project ↗</a><a class="secondary" href="notebooks_html/E1Test.html" aria-label="Read Exploratory Analysis Exercise notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="analytics">
+  <div class="work-card-top"><span class="work-category">Analytics</span><span class="work-number">03</span></div>
+  <h3>Exploratory Plots and Diagnostics</h3>
+  <p>Working through distributions, relationships and visual checks to better understand datasets.</p>
+  <div class="work-tags"><span>Matplotlib</span><span>Pandas</span></div>
+  <div class="work-actions"><a href="projects/Test2.html" aria-label="Read Exploratory Plots and Diagnostics case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Test2.html" aria-label="Read Exploratory Plots and Diagnostics notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="forecasting">
+  <div class="work-card-top"><span class="work-category">Forecasting</span><span class="work-number">04</span></div>
+  <h3>Forecasting Exercises and Model Diagnostics</h3>
+  <p>A practical forecasting exercise with emphasis on model diagnostics and interpretation.</p>
+  <div class="work-tags"><span>Time series</span><span>Python</span></div>
+  <div class="work-actions"><a href="projects/Forecasting.html" aria-label="Read Forecasting Exercises and Model Diagnostics case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Forecasting.html" aria-label="Read Forecasting Exercises and Model Diagnostics notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="mmm">
+  <div class="work-card-top"><span class="work-category">Marketing Mix Modeling</span><span class="work-number">05</span></div>
+  <h3>Impressions vs Conversions Relationship Analysis</h3>
+  <p>Examining the relationship between advertising impressions and conversion behavior.</p>
+  <div class="work-tags"><span>Pandas</span><span>Marketing analytics</span></div>
+  <div class="work-actions"><a href="projects/ImpVsConv.html" aria-label="Read Impressions vs Conversions Relationship Analysis case study">Explore project ↗</a><a class="secondary" href="notebooks_html/ImpVsConv.html" aria-label="Read Impressions vs Conversions Relationship Analysis notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="attribution">
+  <div class="work-card-top"><span class="work-category">Attribution</span><span class="work-number">06</span></div>
+  <h3>Marketing Attribution with Markov Chains and Heuristics</h3>
+  <p>Exploring customer journeys, assisted conversions and different ways to allocate channel credit.</p>
+  <div class="work-tags"><span>Markov chains</span><span>Python</span></div>
+  <div class="work-actions"><a href="projects/Marketing_Attribution.html" aria-label="Read Marketing Attribution with Markov Chains and Heuristics case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Marketing_Attribution.html" aria-label="Read Marketing Attribution with Markov Chains and Heuristics notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="mmm">
+  <div class="work-card-top"><span class="work-category">Marketing Mix Modeling</span><span class="work-number">07</span></div>
+  <h3>Marketing Mix Model with Linear Regression</h3>
+  <p>An interpretable regression baseline using advertising activity to model sales.</p>
+  <div class="work-tags"><span>Regression</span><span>Python</span></div>
+  <div class="work-actions"><a href="projects/MMM_Galileo.html" aria-label="Read Marketing Mix Model with Linear Regression case study">Explore project ↗</a><a class="secondary" href="notebooks_html/MMM_Galileo.html" aria-label="Read Marketing Mix Model with Linear Regression notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="mmm">
+  <div class="work-card-top"><span class="work-category">Marketing Mix Modeling</span><span class="work-number">08</span></div>
+  <h3>MMM Foundations with Adstock and Saturation</h3>
+  <p>Building intuition for lagged advertising effects, diminishing returns and regression-based MMM.</p>
+  <div class="work-tags"><span>Adstock</span><span>Saturation</span></div>
+  <div class="work-actions"><a href="projects/Lecture_MMM.html" aria-label="Read MMM Foundations with Adstock and Saturation case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Lecture_MMM.html" aria-label="Read MMM Foundations with Adstock and Saturation notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="mmm">
+  <div class="work-card-top"><span class="work-category">Marketing Mix Modeling</span><span class="work-number">09</span></div>
+  <h3>MMM Lecture Notes and Walkthrough</h3>
+  <p>A teaching-oriented notebook on media contribution modeling and translating estimates into decisions.</p>
+  <div class="work-tags"><span>MMM</span><span>Education</span></div>
+  <div class="work-actions"><a href="projects/MMM_lecture.html" aria-label="Read MMM Lecture Notes and Walkthrough case study">Explore project ↗</a><a class="secondary" href="notebooks_html/MMM_lecture.html" aria-label="Read MMM Lecture Notes and Walkthrough notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="analytics">
+  <div class="work-card-top"><span class="work-category">Analytics</span><span class="work-number">10</span></div>
+  <h3>Exploratory Analytics Scratchpad</h3>
+  <p>A working collection of quick data checks, exploration and visual analysis.</p>
+  <div class="work-tags"><span>Pandas</span><span>Exploration</span></div>
+  <div class="work-actions"><a href="projects/Test.html" aria-label="Read Exploratory Analytics Scratchpad case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Test.html" aria-label="Read Exploratory Analytics Scratchpad notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="forecasting">
+  <div class="work-card-top"><span class="work-category">Forecasting</span><span class="work-number">11</span></div>
+  <h3>Time Series Forecasting: SARIMA vs Prophet</h3>
+  <p>Comparing forecasting approaches for temporal patterns and evaluating their outputs.</p>
+  <div class="work-tags"><span>SARIMA</span><span>Prophet</span></div>
+  <div class="work-actions"><a href="projects/SARIMAvsProphet.html" aria-label="Read Time Series Forecasting: SARIMA vs Prophet case study">Explore project ↗</a><a class="secondary" href="notebooks_html/SARIMAvsProphet.html" aria-label="Read Time Series Forecasting: SARIMA vs Prophet notebook">Notebook view</a></div>
+</article>
+<article class="work-card" data-category="forecasting">
+  <div class="work-card-top"><span class="work-category">Forecasting</span><span class="work-number">12</span></div>
+  <h3>Time Series Modeling with SARIMA</h3>
+  <p>Exploring seasonal sales patterns and forecasting behavior using SARIMA.</p>
+  <div class="work-tags"><span>Time series</span><span>Statsmodels</span></div>
+  <div class="work-actions"><a href="projects/Untitled.html" aria-label="Read Time Series Modeling with SARIMA case study">Explore project ↗</a><a class="secondary" href="notebooks_html/Untitled.html" aria-label="Read Time Series Modeling with SARIMA notebook">Notebook view</a></div>
+</article>
+      </div>
+    </section>
 
-The linear regression equation for predicting sales based on advertising spend is:
-## {Sales} = β0 + β1{TV} + β2{Radio} + β3{Newspaper}...</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Lecture_MMM.html">Project page</a>
-        <a class="btn" href="notebooks_html/Lecture_MMM.html">Notebook view</a>
+    <section class="home-section" id="approach" aria-labelledby="approach-title">
+      <div class="section-heading"><div><span class="eyebrow">03 / Philosophy</span><h2 id="approach-title">The questions behind the models.</h2><p>I care about how analytical outputs hold up when they are used to make actual decisions.</p></div></div>
+      <div class="principles">
+        <div class="principle"><span class="principle-index">01 —</span><h3>Start with the business question</h3><p>What would change if we knew the answer? A useful model starts with the decision, not the algorithm.</p></div>
+        <div class="principle"><span class="principle-index">02 —</span><h3>Be clear about uncertainty</h3><p>High predictive accuracy is not the same as causal certainty. Assumptions and validation deserve attention.</p></div>
+        <div class="principle"><span class="principle-index">03 —</span><h3>Make the results usable</h3><p>Clear comparisons, response curves and practical tools help turn statistical estimates into informed choices.</p></div>
       </div>
-    </div>
-    
-    <div class="card">
-      <h3>MMM Lecture Notes and Walkthrough</h3>
-      <div class="meta"><span class="badge">Marketing Mix Modeling</span><span class="badge">pandas sklearn</span></div>
-      <p>Estimate channel impact on sales or conversions and translate model outputs into budget guidance.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/MMM_lecture.html">Project page</a>
-        <a class="btn" href="notebooks_html/MMM_lecture.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Scratchpad Notebook</h3>
-      <div class="meta"><span class="badge">Analytics</span><span class="badge">pandas</span></div>
-      <p>Analyze relationships in marketing and product data and translate findings into actions.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Test.html">Project page</a>
-        <a class="btn" href="notebooks_html/Test.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Time Series Forecasting Comparison SARIMA vs Prophet</h3>
-      <div class="meta"><span class="badge">Forecasting</span><span class="badge">matplotlib numpy pandas</span></div>
-      <p>### SARIMAX</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/SARIMAvsProphet.html">Project page</a>
-        <a class="btn" href="notebooks_html/SARIMAvsProphet.html">Notebook view</a>
-      </div>
-    </div>
-    
-    <div class="card">
-      <h3>Time Series Modeling with SARIMA</h3>
-      <div class="meta"><span class="badge">Forecasting</span><span class="badge">matplotlib pandas statsmodels</span></div>
-      <p>Forecast a key metric and compare models for accuracy, stability, and explainability.</p>
-      <div class="btnrow">
-        <a class="btn primary" href="projects/Untitled.html">Project page</a>
-        <a class="btn" href="notebooks_html/Untitled.html">Notebook view</a>
-      </div>
-    </div>
-    
-      </div>
-    </div>
-    <div class="section testimonials">
-      <div class="testHead">
-        <h2>Recommendations</h2>
-        <a class="btn" href="testimonials.html">View all</a>
-      </div>
-      <div class="testGrid">
-        
-        <a class="testCard" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener">
-          <div class="shotWrap">
-            <img class="shot" src="assets/testimonials/carlos.png" alt="LinkedIn recommendation from Carlos Zelada">
-            <div class="coBadge">Vana</div>
-          </div>
-          <div class="testMeta">
-            <div class="testName">Carlos Zelada</div>
-            <div class="testRole">VP of Data, Vana</div>
-          </div>
-        </a>
-        <a class="testCard" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener">
-          <div class="shotWrap">
-            <img class="shot" src="assets/testimonials/howard.png" alt="LinkedIn recommendation from Howard Yeh">
-            <div class="coBadge">HealthCare.com</div>
-          </div>
-          <div class="testMeta">
-            <div class="testName">Howard Yeh</div>
-            <div class="testRole">Founding CEO, HealthCare.com</div>
-          </div>
-        </a>
-        <a class="testCard" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener">
-          <div class="shotWrap">
-            <img class="shot" src="assets/testimonials/ana.png" alt="LinkedIn recommendation from Ana Camposeco Jacobs">
-            <div class="coBadge">Excel Impact</div>
-          </div>
-          <div class="testMeta">
-            <div class="testName">Ana Camposeco Jacobs</div>
-            <div class="testRole">Director of Data, Excel Impact</div>
-          </div>
-        </a>
-        <a class="testCard" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener">
-          <div class="shotWrap">
-            <img class="shot" src="assets/testimonials/tanya.png" alt="LinkedIn recommendation from Tanya Iskandar">
-            <div class="coBadge">Tend</div>
-          </div>
-          <div class="testMeta">
-            <div class="testName">Tanya Iskandar</div>
-            <div class="testRole">Strategy and Ops Leader, Tend</div>
-          </div>
-        </a>
-        <a class="testCard" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener">
-          <div class="shotWrap">
-            <img class="shot" src="assets/testimonials/julian.png" alt="LinkedIn recommendation from Julian Bharadwaj">
-            <div class="coBadge">Google</div>
-          </div>
-          <div class="testMeta">
-            <div class="testName">Julian Bharadwaj</div>
-            <div class="testRole">Data Scientist, Google</div>
-          </div>
-        </a>
-      </div>
-    </div>
+    </section>
 
+    <section class="home-section" id="recommendations" aria-labelledby="recommendations-title">
+      <div class="section-heading">
+        <div><span class="eyebrow">04 / Professional recommendations</span><h2 id="recommendations-title">From people I've worked with.</h2>
+          <p>Recommendations shared by colleagues and leaders from past work.</p></div>
+        <a class="subtle-link" href="testimonials.html">View all recommendations ↗</a>
+      </div>
+      <div class="rec-grid">
+<a class="rec-card" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener noreferrer" aria-label="Read recommendation from Carlos Zelada on LinkedIn">
+  <div class="rec-image"><img src="assets/testimonials/carlos.png" alt="LinkedIn recommendation screenshot from Carlos Zelada" loading="lazy"><span class="rec-company">Vana</span></div>
+  <div class="rec-body"><strong>Carlos Zelada</strong><span>VP of Data, Vana</span></div>
+</a>
+<a class="rec-card" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener noreferrer" aria-label="Read recommendation from Howard Yeh on LinkedIn">
+  <div class="rec-image"><img src="assets/testimonials/howard.png" alt="LinkedIn recommendation screenshot from Howard Yeh" loading="lazy"><span class="rec-company">HealthCare.com</span></div>
+  <div class="rec-body"><strong>Howard Yeh</strong><span>Founding CEO, HealthCare.com</span></div>
+</a>
+<a class="rec-card" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener noreferrer" aria-label="Read recommendation from Ana Camposeco Jacobs on LinkedIn">
+  <div class="rec-image"><img src="assets/testimonials/ana.png" alt="LinkedIn recommendation screenshot from Ana Camposeco Jacobs" loading="lazy"><span class="rec-company">Excel Impact</span></div>
+  <div class="rec-body"><strong>Ana Camposeco Jacobs</strong><span>Director of Data, Excel Impact</span></div>
+</a>
+<a class="rec-card" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener noreferrer" aria-label="Read recommendation from Tanya Iskandar on LinkedIn">
+  <div class="rec-image"><img src="assets/testimonials/tanya.png" alt="LinkedIn recommendation screenshot from Tanya Iskandar" loading="lazy"><span class="rec-company">Tend</span></div>
+  <div class="rec-body"><strong>Tanya Iskandar</strong><span>Strategy and Ops Leader, Tend</span></div>
+</a>
+<a class="rec-card" href="https://www.linkedin.com/in/mjawhar/details/recommendations/?detailScreenTabIndex=1" target="_blank" rel="noopener noreferrer" aria-label="Read recommendation from Julian Bharadwaj on LinkedIn">
+  <div class="rec-image"><img src="assets/testimonials/julian.png" alt="LinkedIn recommendation screenshot from Julian Bharadwaj" loading="lazy"><span class="rec-company">Google</span></div>
+  <div class="rec-body"><strong>Julian Bharadwaj</strong><span>Data Scientist, Google</span></div>
+</a>
+      </div>
+    </section>
 
-    <div class="footer">
-      Built for GitHub Pages. Upload this repo and enable Pages from the main branch root.
-    </div>
-  </div>
+    <aside class="bottom-cta" aria-label="Connect">
+      <div><h2>Interested in the work behind the charts?</h2><p>Explore the code, read the case studies, or connect with me on LinkedIn.</p></div>
+      <div class="hero-actions" style="margin:0">
+        <a class="home-btn primary" href="https://github.com/jawharjoe" target="_blank" rel="noopener noreferrer">Browse GitHub ↗</a>
+        <a class="home-btn" href="https://www.linkedin.com/in/mjawhar/" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+    </aside>
+  </main>
+  <footer class="home-shell site-footer">
+    <span>© 2026 Mohammed Jawhar · Marketing science &amp; data analytics</span>
+    <span><a href="#about">Back to top ↑</a> · <a href="testimonials.html">Recommendations</a> · <a href="https://github.com/jawharjoe/Portfolio-MMM" target="_blank" rel="noopener noreferrer">Website source</a></span>
+  </footer>
+  <script>
+    (function(){
+      const filters = Array.from(document.querySelectorAll('[data-filter]'));
+      const cards = Array.from(document.querySelectorAll('.work-card'));
+      const count = document.getElementById('result-count');
+      filters.forEach(button => button.addEventListener('click', function(){
+        const chosen = button.getAttribute('data-filter');
+        filters.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+        let visible = 0;
+        cards.forEach(card => {
+          const matches = chosen === 'all' || card.getAttribute('data-category') === chosen;
+          card.hidden = !matches;
+          if (matches) visible++;
+        });
+        count.textContent = visible + (visible === 1 ? ' project' : ' projects');
+      }));
+    })();
+  </script>
 </body>
 </html>
