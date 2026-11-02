@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A portfolio case study of Bayesian Marketing Mix Modeling with Google Meridian: a synthetic three-channel, 156-week marketing measurement example with adstock, saturation and budget reallocation.">
+  <title>Bayesian Marketing Mix Modeling with Google Meridian | Mohammed Jawhar</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .meridian-page{max-width:1040px;margin:0 auto}
+    .meridian-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0 28px}
+    .meridian-top a{font-weight:650}
+    .meridian-lead{padding:30px;position:relative;overflow:hidden;border-color:rgba(122,167,255,.30)}
+    .meridian-kicker{font-size:12px;font-weight:750;letter-spacing:.12em;text-transform:uppercase;color:#a6c3ff}
+    .meridian-lead h1{font-size:clamp(30px,4.5vw,49px);line-height:1.12;margin:12px 0 16px;max-width:18ch}
+    .meridian-lead p{color:var(--muted);font-size:16px;line-height:1.65;max-width:80ch}
+    .meridian-actions{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 10px}
+    .meridian-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+    .meridian-metric strong{font-size:24px;display:block;margin-bottom:7px}
+    .meridian-metric span{font-size:12px;line-height:1.5;color:var(--muted)}
+    .meridian-section{margin-top:32px}
+    .meridian-section h2{font-size:23px;margin:0 0 10px}
+    .meridian-section>p{color:var(--muted);line-height:1.7}
+    .meridian-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .meridian-tile h3{font-size:17px}
+    .meridian-tile p,.meridian-tile li{color:var(--muted);font-size:14px;line-height:1.7}
+    .meridian-tile ul{padding-left:18px}
+    .meridian-figure{overflow:hidden;padding:0}
+    .meridian-figure img{display:block;width:100%;height:auto;background:#fff;object-fit:contain}
+    .meridian-figure figcaption{padding:15px 18px;color:var(--muted);font-size:13px;line-height:1.65}
+    .meridian-figure figcaption strong{color:var(--text)}
+    .meridian-callout{padding:20px;border-left:3px solid var(--accent);background:rgba(122,167,255,.06);border-radius:12px;color:var(--muted);line-height:1.7}
+    .meridian-table{width:100%;border-collapse:collapse;font-size:14px;margin:14px 0}
+    .meridian-table th,.meridian-table td{border-bottom:1px solid var(--border);padding:12px 9px;text-align:left}
+    .meridian-table th{color:var(--muted);font-size:12px}
+    .meridian-table td:nth-child(n+2),.meridian-table th:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums}
+    .meridian-fine{color:var(--muted);font-size:12px;line-height:1.7}
+    @media(max-width:760px){.meridian-metrics{grid-template-columns:repeat(2,1fr)}.meridian-two{grid-template-columns:1fr}.meridian-lead{padding:20px}.meridian-table{font-size:12px}}
+  </style>
+</head>
+<body>
+  <main class="container meridian-page">
+    <nav class="meridian-top" aria-label="Portfolio navigation">
+      <a href="../index.html">← Marketing Analytics Portfolio</a>
+      <div class="btnrow"><a class="btn" href="../index.html#projects">All projects</a><a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian" target="_blank" rel="noopener noreferrer">GitHub repository</a></div>
+    </nav>
+
+    <header class="card meridian-lead">
+      <div class="meridian-kicker">Featured case study · Bayesian MMM · October 2026</div>
+      <h1>Marketing Measurement with Google Meridian</h1>
+      <p>I built a Bayesian Marketing Mix Modeling workshop around a fictional e-commerce business to explore a practical question: <strong>how do we estimate marketing impact and decide where to spend the next dollar?</strong> The project was presented in a graduate-student conversation at Universidad Galileo and includes a reproducible Python notebook, visual diagnostics, and a budget scenario simulator.</p>
+      <div class="meta">
+        <span class="badge">Python + JupyterLab</span>
+        <span class="badge">Google Meridian</span>
+        <span class="badge">Bayesian inference</span>
+        <span class="badge">Adstock + Hill saturation</span>
+        <span class="badge">Budget scenarios</span>
+      </div>
+      <div class="meridian-actions">
+        <a class="btn primary" href="https://github.com/jawharjoe/marketing-measurement-meridian" target="_blank" rel="noopener noreferrer">Explore full project on GitHub</a>
+        <a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/notebooks/01_meridian_mmm_workshop.ipynb" target="_blank" rel="noopener noreferrer">View Python notebook</a>
+        <a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/slides/Marketing_Measurement_From_Attribution_to_Influence.pdf" target="_blank" rel="noopener noreferrer">Lecture slides (PDF)</a>
+      </div>
+      <div class="meridian-fine">Educational project using synthetic data. Reported outputs are model estimates, not verified real-world campaign results.</div>
+    </header>
+
+    <div class="meridian-metrics" aria-label="Illustrative project summary">
+      <div class="card meridian-metric"><strong>156</strong><span>weekly observations, 2023–2025 (synthetic)</span></div>
+      <div class="card meridian-metric"><strong>3</strong><span>channels: Search, Meta and YouTube</span></div>
+      <div class="card meridian-metric"><strong>R² 0.93</strong><span>reported in-sample model fit</span></div>
+      <div class="card meridian-metric"><strong>~$23.12M</strong><span>synthetic historical media spend</span></div>
+    </div>
+
+    <section class="meridian-section" aria-labelledby="problem">
+      <h2 id="problem">The problem</h2>
+      <p>Last-click attribution assigns credit to the final touchpoint, but it cannot tell us what would have happened without advertising. For a business spending across multiple channels, seasonality, promotions, and changing consumer demand make the real impact hard to isolate. This project demonstrates how a probabilistic MMM can help frame the problem, estimate response curves, and support budget discussions—with explicit uncertainty and causal limitations.</p>
+    </section>
+
+    <section class="meridian-section" aria-labelledby="approach">
+      <h2 id="approach">What I built</h2>
+      <div class="meridian-two">
+        <div class="card meridian-tile">
+          <h3>01 · Synthetic business data</h3>
+          <p>Generated a weekly revenue series with Google Search, Meta, and YouTube advertising activity, alongside promotional and demand-related inputs. The modeled KPI is <strong>revenue (USD)</strong>, not conversion counts.</p>
+        </div>
+        <div class="card meridian-tile">
+          <h3>02 · Bayesian media-response model</h3>
+          <p>Used Meridian to illustrate carryover (adstock), diminishing returns (Hill saturation), and posterior uncertainty. The workshop includes MCMC convergence checks and model-fit visualizations.</p>
+        </div>
+        <div class="card meridian-tile">
+          <h3>03 · Spend-response analysis</h3>
+          <p>Built channel-level response curves showing how the model's estimated incremental revenue changes across spend levels, including uncertainty bands.</p>
+        </div>
+        <div class="card meridian-tile">
+          <h3>04 · Interactive budget scenarios</h3>
+          <p>Added budget sliders for testing changes across Search, Meta, and YouTube. The notebook compares historical spend with a proposed scenario and calculates modeled incremental revenue changes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="meridian-section" aria-labelledby="visuals">
+      <h2 id="visuals">Selected results</h2>
+      <p>These are screenshots from the synthetic Meridian workshop; click through to the <a href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/docs/visual_results.md" target="_blank" rel="noopener noreferrer">annotated results gallery</a> for fuller descriptions.</p>
+      <div class="meridian-two">
+        <figure class="card meridian-figure">
+          <img src="https://raw.githubusercontent.com/jawharjoe/marketing-measurement-meridian/main/assets/results/02_model_fit_expected_actual.png" loading="lazy" alt="Expected versus observed synthetic weekly revenue and modeled baseline">
+          <figcaption><strong>Expected vs. observed revenue.</strong> Reported in-sample results include R² ≈ 0.93 and MAPE ≈ 2%. Strong fit is not itself evidence that media contributions are causal.</figcaption>
+        </figure>
+        <figure class="card meridian-figure">
+          <img src="https://raw.githubusercontent.com/jawharjoe/marketing-measurement-meridian/main/assets/results/03_hill_and_response_curves.png" loading="lazy" alt="Hill saturation and spend-response curves for Google Search, Meta and YouTube">
+          <figcaption><strong>Channel response curves.</strong> The model represents diminishing returns as spend increases; shaded bands summarize posterior uncertainty under the specified model.</figcaption>
+        </figure>
+        <figure class="card meridian-figure">
+          <img src="https://raw.githubusercontent.com/jawharjoe/marketing-measurement-meridian/main/assets/results/01_adstock_decay.png" loading="lazy" alt="Illustration of advertising exposure and decaying carryover over multiple weeks">
+          <figcaption><strong>Advertising carryover.</strong> An exposure may influence outcomes over subsequent periods, motivating the use of an adstock transformation.</figcaption>
+        </figure>
+        <figure class="card meridian-figure">
+          <img src="https://raw.githubusercontent.com/jawharjoe/marketing-measurement-meridian/main/assets/results/05_budget_scenario_simulator.png" loading="lazy" alt="Interactive model-estimated budget scenario with channel sliders and revenue results">
+          <figcaption><strong>What-if simulator.</strong> Historical and proposed budgets can be compared against estimated incremental revenue; this is a model scenario, not a measured experiment.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="meridian-section" aria-labelledby="budget">
+      <h2 id="budget">A sample budget-reallocation scenario</h2>
+      <p>One teaching scenario sets Search to 70% of historical spend, Meta to 125%, and YouTube to 135%. It explores a different mix, not a guaranteed optimum. In this example the total budget also rises slightly.</p>
+      <div class="card">
+        <div style="overflow-x:auto">
+          <table class="meridian-table">
+            <thead><tr><th scope="col">Synthetic modeled quantity</th><th scope="col">Historical</th><th scope="col">Scenario</th><th scope="col">Change</th></tr></thead>
+            <tbody>
+              <tr><td>Total media spend</td><td>$23,116,217</td><td>$23,144,438</td><td>+$28,221</td></tr>
+              <tr><td>Model-estimated incremental revenue</td><td>$33,479,470</td><td>$34,984,376</td><td>+$1,504,906</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="meridian-fine">The model estimates a higher incremental revenue under the proposed mix, but these numbers are not observed sales, experimentally verified lift, or net profit. Results depend on the fitted response functions and the validity of the modeling assumptions.</p>
+      </div>
+    </section>
+
+    <section class="meridian-section" aria-labelledby="takeaways">
+      <h2 id="takeaways">What the work demonstrates—and what I'd validate next</h2>
+      <div class="meridian-two">
+        <div class="card meridian-tile">
+          <h3>Key takeaways</h3>
+          <ul>
+            <li>Prediction accuracy and causal marketing measurement are different objectives.</li>
+            <li>Bayesian priors and posterior distributions make some assumptions and uncertainty explicit, but do not automatically solve confounding.</li>
+            <li>Response curves connect statistical modeling to a business decision: where incremental spend might be most productive.</li>
+            <li>A budget proposal needs to account for additional spend, profit margins, and operational constraints.</li>
+          </ul>
+        </div>
+        <div class="card meridian-tile">
+          <h3>Production-readiness checks</h3>
+          <ul>
+            <li>Out-of-time predictive evaluation, residual inspection, and posterior predictive checks.</li>
+            <li>Sampling diagnostics: R-hat, effective sample size, and divergences.</li>
+            <li>Prior sensitivity, credible control variables, and media variation/collinearity.</li>
+            <li>Calibration against independent geo-lift or conversion-lift experiments where available.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="meridian-section" aria-labelledby="resources">
+      <h2 id="resources">Explore the implementation</h2>
+      <div class="card meridian-tile">
+        <p>All the lecture materials and synthetic data are published in the companion repository. The packaged notebook is educational and the original posterior has not been independently refit as part of publication.</p>
+        <div class="btnrow">
+          <a class="btn primary" href="https://github.com/jawharjoe/marketing-measurement-meridian" target="_blank" rel="noopener noreferrer">Full GitHub project</a>
+          <a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/notebooks/01_meridian_mmm_workshop.ipynb" target="_blank" rel="noopener noreferrer">Notebook</a>
+          <a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/docs/visual_results.md" target="_blank" rel="noopener noreferrer">Results gallery</a>
+          <a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/docs/bayesian_vs_frequentist.md" target="_blank" rel="noopener noreferrer">Bayesian vs. frequentist</a>
+          <a class="btn" href="https://github.com/jawharjoe/marketing-measurement-meridian/blob/main/docs/lecture_summary.md" target="_blank" rel="noopener noreferrer">Lecture summary</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">Mohammed Jawhar · Marketing Measurement: From Attribution to Influence · Universidad Galileo, October 28, 2026</footer>
+  </main>
+</body>
+</html>
